@@ -6,7 +6,7 @@ const skillCategories = [
     title: "AI & GEO",
     skills: ["Generative Engine Optimization", "Prompt Engineering", "MCP (Model Context Protocol)", "AI Agents"],
     colSpan: "md:col-span-8",
-    rowSpan: "md:row-span-1",
+    rowSpan: "md:row-span-2",
     svg: (
       <svg className="absolute right-0 bottom-0 w-64 h-64 opacity-10 text-theme-text" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1">
         <path d="M10,100 Q50,10 100,100 T190,100" />
@@ -31,18 +31,6 @@ const skillCategories = [
       </svg>
     )
   },
-  {
-    title: "AI-Native Workflow",
-    skills: ["Claude 3.5 Sonnet", "Cursor", "Vercel", "Build in Public"],
-    colSpan: "md:col-span-8",
-    rowSpan: "md:row-span-1",
-    svg: (
-      <svg className="absolute right-10 top-10 w-48 h-48 opacity-10 text-theme-text" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1">
-        <rect x="40" y="40" width="120" height="120" transform="rotate(45 100 100)" />
-        <rect x="60" y="60" width="80" height="80" transform="rotate(45 100 100)" />
-      </svg>
-    )
-  }
 ];
 
 function GlowCard({ children, className, delay, key }: { children: React.ReactNode, className: string, delay: number, key?: React.Key }) {
