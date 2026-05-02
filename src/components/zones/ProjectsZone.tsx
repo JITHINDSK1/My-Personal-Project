@@ -8,7 +8,8 @@ const projects = [
     title: "Rylix.ai",
     purpose: "Generative Engine Optimization",
     desc: "Building the infrastructure that helps brands survive the shift from Search to Conversation. We ensure your brand is the one the AI recommends.",
-    tech: ["AI Agents", "GEO", "Enterprise AI"]
+    tech: ["AI Agents", "GEO", "Enterprise AI"],
+    href: "https://rylixai.vercel.app"
   },
   {
     id: "02",
@@ -16,14 +17,16 @@ const projects = [
     purpose: "Market Insight",
     desc: "Search is dead. Conversation is the new starting point. Users no longer want a list of links; they want answers from LLMs.",
     tech: ["Analysis", "Market Shift"],
-    mt: "md:mt-12"
+    mt: "md:mt-12",
+    href: "https://rylixai.vercel.app"
   },
   {
     id: "03",
     title: "The Solution",
     purpose: "GEO Framework",
     desc: "Our Generative Engine Optimization ensures brands are indexed and cited by modern reasoning models like Claude, GPT-4, and Gemini.",
-    tech: ["Citerank AI", "Indexing"]
+    tech: ["Citerank AI", "Indexing"],
+    href: "https://rylixai.vercel.app"
   },
   {
     id: "04",
@@ -31,7 +34,8 @@ const projects = [
     purpose: "Guiding Principles",
     desc: "Less hype, more signal. Focusing on clear metrics, earned conviction, and zero-click outcomes.",
     tech: ["Pragmatic Ambition"],
-    mt: "md:mt-12"
+    mt: "md:mt-12",
+    href: "https://rylixai.vercel.app"
   }
 ];
 
@@ -53,13 +57,16 @@ export function ProjectsZone() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((proj, i) => (
-            <motion.div 
+            <motion.a
               key={proj.id}
+              href={proj.href}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.1 }}
-              className={`border border-theme-text/20 p-10 relative overflow-hidden group interactive transition-colors duration-500 hover:bg-theme-text hover:text-theme-bg ${proj.mt || ''}`}
+              className={`border border-theme-text/20 p-10 relative overflow-hidden group interactive transition-colors duration-500 hover:bg-theme-text hover:text-theme-bg ${proj.mt || ''} block`}
             >
               {/* Hover Background Accent */}
               <div className="absolute inset-0 bg-theme-text translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.22,1,0.36,1] z-0" />
@@ -87,7 +94,7 @@ export function ProjectsZone() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

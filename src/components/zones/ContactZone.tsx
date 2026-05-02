@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const interests = [
   "AI Agents",
@@ -83,9 +83,8 @@ export function ContactZone() {
           
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-16">
             <ContactLink href="mailto:jithin@rylix.ai" icon={<Mail />} label="Email" />
-            <ContactLink href="https://github.com/fineforawhile" icon={<Github />} label="GitHub" />
-            <ContactLink href="https://linkedin.com/in/jithinreddy" icon={<Linkedin />} label="LinkedIn" />
-            <ContactLink href="https://twitter.com/fineforawhile" icon={<Twitter />} label="Twitter" />
+            <ContactLink href="https://github.com/JITHINDSK1" icon={<Github />} label="GitHub" />
+            <ContactLink href="https://linkedin.com/in/jithinreddygurrala" icon={<Linkedin />} label="LinkedIn" />
           </div>
         </motion.div>
 

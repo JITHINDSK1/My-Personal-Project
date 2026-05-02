@@ -96,14 +96,7 @@ export function SkillsZone() {
   return (
     <section ref={containerRef} className="relative flex flex-col justify-center px-5 py-20">
       <div className="max-w-6xl mx-auto w-full">
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-[10px] uppercase tracking-[0.4em] text-theme-muted mb-12"
-        >
-          Technical Arsenal
-        </motion.p>
+        <div className="mb-12" />
 
         <motion.div style={{ y }} className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(180px,auto)]">
           {skillCategories.map((category, idx) => (
